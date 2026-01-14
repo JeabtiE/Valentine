@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    padding: 16px; /* กันชนจอมือถือ */
+}
+
+/* ===== BACKGROUND ANIMATION ===== */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 100%;
+    max-width: 380px; /* ขนาดพอดีมือถือ */
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 24px;
+    padding: 28px 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* ===== TITLE ===== */
+.container h1 {
+    color: #000;
+    font-family: "Noto Sans Thai", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.container img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+/* ===== TIMER ===== */
+#timer {
+    color: #000;
+    font-family: "Noto Sans Thai", sans-serif;
+    font-size: clamp(1.8rem, 6vw, 3rem); /* responsive */
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* ===== TIMER LABEL ===== */
+#timer2 {
+    color: #333;
+    font-family: "Noto Sans Thai", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: contents;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 20px 80px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #ffffff;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    transition: background-color 1s;
+    font-family: "Noto Sans Thai", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 16px;
+
+}
+
+.glass-button:link,
+.glass-button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 30px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.glass-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.glass-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.glass-button-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.glass-button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.glass-button-white::after {
+    background-color: #fff;
+}
+
+.glass-button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.glass-button-animate {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* 📟 iPad (เฉพาะช่วง 601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 42px;
+        margin-bottom: -10px;
+    }
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+
+    .glass-container {
+        width: 80%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-container {
+        margin-bottom: 20px; 
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    footer {
+        font-size: 100px;
+        padding: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .glass-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .glass-button {
+        max-width: 80%;
+        padding: 15px 60px;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
