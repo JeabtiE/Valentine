@@ -1,11 +1,12 @@
 
+
 const images = ["gif6.gif", "gif5.gif", "gif4.gif", "gif3.gif", "gif2.gif"];
 const texts = [
-    "Thank you. I love you ヾ(≧▽≦*)o 💖",
-    "I know you would say yes! (❁´◡`❁) ❤️❤️❤️",
-    "This is my best Valentine! (≧∇≦)ﾉ 💝",
-    "I feel like butterfly in my stomach... 🦋💓🦋",
-    "That sound fantastic!! ( •̀ ω •́ )✧"
+    "ขอบคุณน้าาอ้วน เค้าก็รักอ้วนน้า ヾ(≧▽≦*)o ❤️❤️❤️",
+    "หึหึหึ ฉันรู้อยู่ละว่าเธอน่ะชอบฉัน! (～￣▽￣)～ ❤️❤️❤️",
+    "ว๊าาา วันนี้ยิ้มทั้งวันแน่เลยเค้า! (≧∇≦)ﾉ ❤️❤️",
+    "เหมือนมีผีเสื้อบินในท้องเลยอ่าอ้วนน... (✿◠‿◠) 🦋🦋🦋",
+    "ว๊าห๊าา ผมก็ชอบคุณเหมือนกันเว้ยย!!!!!( •̀ ω •́ )✧"
 ];
 
 const randomIndex = Math.floor(Math.random() * images.length);
