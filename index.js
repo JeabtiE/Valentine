@@ -9,7 +9,7 @@ document.getElementById("button1").addEventListener("click", function () {
 
 let clickCount = 0;
 const button = document.getElementById("button1");
-const texts = ["Are you sure? 😨", "Really sure !!?? (┬┬﹏┬┬)", "I will be very sad (；′⌒`)", "Please ... 🥺😣", "Just think again !! 🙇‍♂️"];
+const texts = ["อ้วนแน่ใจนะ? 😨", "เอาดีอ้วน !!?? (┬┬﹏┬┬)", "เค้าจะร้องไห้แล้วนะะ (；′⌒`)", "Please ... 🥺😣", "คิดผิดคิดใหม่ได้นะะ !! 🙇‍♂️"];
 
 button.addEventListener("click", function () {
     if (clickCount < texts.length) {
